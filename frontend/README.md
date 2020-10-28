@@ -1,3 +1,7 @@
+## Notes 
+- we use bootswatch to get css theme - that's why we don't install bootstrap itself. only react-bootstrap
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
