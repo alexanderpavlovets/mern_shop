@@ -24,3 +24,5 @@ export default Header
 
 // <Navbar bg="dark" variant='dark' collapseOnSelect> - missing expand="lg" - with it - just menu icon
 // Commented out Navbar - because if uncomment - nothing changes, ony after adding mentioned above expand - menu appears. Not like in video at all.
+
+// classNames like "fas fa-smth" "far fa-smth" are taken from fontawesome, that is imported in index.html fron cdn.js
