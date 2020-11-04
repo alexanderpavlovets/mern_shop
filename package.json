@@ -1,0 +1,22 @@
+{
+  "name": "mern_shop",
+  "version": "1.0.0",
+  "description": "Alex mern shop",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexanderpavlovets/mern_shop.git"
+  },
+  "author": "Alexander Pavlovets",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexanderpavlovets/mern_shop/issues"
+  },
+  "homepage": "https://github.com/alexanderpavlovets/mern_shop#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
