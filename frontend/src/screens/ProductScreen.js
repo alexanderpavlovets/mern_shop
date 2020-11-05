@@ -15,7 +15,7 @@ const ProductScreen = ({ match }) => {
     }
 
     fetchProduct()
-  }, []) // empty array for dependencies. Read about it more.
+  }, [match]) // empty array for dependencies. Read about it more.
 
   return (
     <>
