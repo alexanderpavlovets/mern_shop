@@ -14,3 +14,4 @@ Than connect a Compass -> Clusters -> connect -> Compass -> Copy connection stri
 Paste connection string to CompassAPP -> change string's ending from default /test to your db name. Add a password to the string
 Than copy another connection URL from "connect from application" to .env file - replace dbname and password
 
+- "colors" package installed. Should be imported once (main file in order of reading) - add colors to string ) really funny one :)
