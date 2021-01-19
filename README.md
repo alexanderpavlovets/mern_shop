@@ -16,4 +16,6 @@ Than copy another connection URL from "connect from application" to .env file - 
 
 - "colors" package installed. Should be imported once (main file in order of reading) - add colors to string ) really funny one :)
 
-- mongooose is using models to describe data. in backend/models
+- mongooose is using models to describe data. in backend/models. Mongo automatically creates "id" field - don't send "id" fields from your data.
+
+- bcryptjs package - not just "bcrypt" - less dependencies. Used to make passwords hashes. In backend/data/users.js
