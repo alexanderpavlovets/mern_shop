@@ -21,3 +21,5 @@ Than copy another connection URL from "connect from application" to .env file - 
 - bcryptjs package - not just "bcrypt" - less dependencies. Used to make passwords hashes. In backend/data/users.js
 
 - express-async-handler package is used to easily handle async exeptions in express. Just need to wrap all async function in it. example in ./backend/routes/productRoutes 
+
+- Alex! remember - you have PostMan collection on PC. Use it test the API
