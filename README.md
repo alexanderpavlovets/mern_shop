@@ -26,3 +26,5 @@ Than copy another connection URL from "connect from application" to .env file - 
 
 - error handling is in separate middleware. Read comments - seems express undertand the error only by amount of params passed to middleware. 404 error also there.
 we also use
+
+- redux-think package is for making async requests from actions
