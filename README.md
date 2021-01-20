@@ -19,3 +19,10 @@ Than copy another connection URL from "connect from application" to .env file - 
 - mongooose is using models to describe data. in backend/models. Mongo automatically creates "id" field - don't send "id" fields from your data.
 
 - bcryptjs package - not just "bcrypt" - less dependencies. Used to make passwords hashes. In backend/data/users.js
+
+- express-async-handler package is used to easily handle async exeptions in express. Just need to wrap all async function in it. example in ./backend/routes/productRoutes. It is instead of using try/catch OR .catch(next)
+
+- Alex! remember - you have PostMan collection on PC. Use it test the API
+
+- error handling is in separate middleware. Read comments - seems express undertand the error only by amount of params passed to middleware. 404 error also there.
+we also use
