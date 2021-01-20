@@ -19,3 +19,5 @@ Than copy another connection URL from "connect from application" to .env file - 
 - mongooose is using models to describe data. in backend/models. Mongo automatically creates "id" field - don't send "id" fields from your data.
 
 - bcryptjs package - not just "bcrypt" - less dependencies. Used to make passwords hashes. In backend/data/users.js
+
+- express-async-handler package is used to easily handle async exeptions in express. Just need to wrap all async function in it. example in ./backend/routes/productRoutes 
