@@ -30,3 +30,5 @@ we also use
 - redux-thunk package is for making async requests from actions. Example is in \frontend\src\actions\productActions.js when we 
 ``` export const listProducts = () => async (dispatch) => { ```
 Read about it more on npm - i bety you will need it in the future. Basically it allows to return function from actions instead of actions. Kind of middleware that gives you a way to make async stuf in actions
+
+
