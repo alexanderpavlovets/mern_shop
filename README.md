@@ -1,6 +1,8 @@
 ## Notes 
 - we use bootswatch to get css theme - that's why we don't install bootstrap itself. only react-bootstrap
 
+- "fas fa-trash" calss names are from font imported in index.html. Goto CDN link from bookmarks and add a link into <head>
+
 - "proxy" property in /frontend/package.json - redirects from 3000 to 5000 port. Allows to write requests from Components just to "/api/smth" via axios in useEffect hook
 
 - IMPORTANT. HA! I'll use es-modules. Node 14.6+ is needed to run this stuff. Or experimental flags - all this stuff
@@ -30,5 +32,9 @@ we also use
 - redux-thunk package is for making async requests from actions. Example is in \frontend\src\actions\productActions.js when we 
 ``` export const listProducts = () => async (dispatch) => { ```
 Read about it more on npm - i bety you will need it in the future. Basically it allows to return function from actions instead of actions. Kind of middleware that gives you a way to make async stuf in actions
+
+- base flow: constants -> reducers -> actions -> implement actions in component
+
+- add to cart interestng approach - by clck on "addToCart" we redirect, than on CartScreen = we just parse props and if cart is open after "addTocart" - we dispatch action "CART_ADD_ITEM" -> set it to local storage 
 
 
