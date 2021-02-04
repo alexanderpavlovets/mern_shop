@@ -33,4 +33,6 @@ Read about it more on npm - i bety you will need it in the future. Basically it 
 
 - base flow: constants -> reducers -> actions -> implement actions in component
 
+- add to cart interestng approach - by clck on "addToCart" we redirect, than on CartScreen = we just parse props and if cart is open after "addTocart" - we dispatch action "CART_ADD_ITEM" -> set it to local storage 
+
 
