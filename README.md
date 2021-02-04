@@ -1,6 +1,8 @@
 ## Notes 
 - we use bootswatch to get css theme - that's why we don't install bootstrap itself. only react-bootstrap
 
+- "fas fa-trash" calss names are from font imported in index.html. Goto CDN link from bookmarks and add a link into <head>
+
 - "proxy" property in /frontend/package.json - redirects from 3000 to 5000 port. Allows to write requests from Components just to "/api/smth" via axios in useEffect hook
 
 - IMPORTANT. HA! I'll use es-modules. Node 14.6+ is needed to run this stuff. Or experimental flags - all this stuff
