@@ -37,4 +37,6 @@ Read about it more on npm - i bety you will need it in the future. Basically it 
 
 - add to cart interestng approach - by clck on "addToCart" we redirect, than on CartScreen = we just parse props and if cart is open after "addTocart" - we dispatch action "CART_ADD_ITEM" -> set it to local storage 
 
+- Mongoose schema can have own added methods - see example in \backend\models\userModel.js
+
 
