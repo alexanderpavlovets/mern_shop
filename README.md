@@ -41,4 +41,6 @@ Read about it more on npm - i bety you will need it in the future. Basically it 
 
 - Middleware can ve applie to only 1 endpoint - pass it as firstargument. Example in \backend\routes\userRoutes.js
 
+- Take a look how Mongoose can encrypt some fields (password in this case). Via some preprocessor. Example: \backend\models\userModel.js
+
 
