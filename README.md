@@ -39,4 +39,6 @@ Read about it more on npm - i bety you will need it in the future. Basically it 
 
 - Mongoose schema can have own added methods - see example in \backend\models\userModel.js
 
+- Middleware can ve applie to only 1 endpoint - pass it as firstargument. Example in \backend\routes\userRoutes.js
+
 
