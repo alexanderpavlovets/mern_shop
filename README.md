@@ -45,4 +45,6 @@ Read about it more on npm - i bety you will need it in the future. Basically it 
 
 - read in react-bootstrap about Form. Form.Control Form.Group Form.Label ... etc.
 
+- we dispatch 2 action USER_REGISTER and USER_LOGIN in "userActions -> register" - to set creds into local storage after success register
+
 
