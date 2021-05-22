@@ -1,5 +1,5 @@
 ## Notes 
-- we use bootswatch to get css theme - that's why we don't install bootstrap itself. only react-bootstrap
+- we use bootswatch to get css theme - that's why we don't install bootstrap itself. only react-bootstrap. This is important - again i forgot how to install themes :) Just go to bootsatch -> download -> cope bootstrap.min.css and import it
 
 - "fas fa-trash" calss names are from font imported in index.html. Goto CDN link from bookmarks and add a link into <head>
 
