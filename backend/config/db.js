@@ -2,12 +2,7 @@ import mongoose from 'mongoose'
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI, { // options. Have no idea about them now :)
-      // Seems now just for disabling warnings in logs
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-      useCreateIndex: true
-    })
+    const conn = await mongoose.connect(process.env.MONGO_URI) // here was 2nd argument - options, but now it is not needed, because they applied automatically
 
     console.log(`MongoDB Connected ${conn.connection.host}`.cyan.underline)
   } catch (err) {

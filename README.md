@@ -24,7 +24,7 @@ Than copy another connection URL from "connect from application" to .env file - 
 
 - express-async-handler package is used to easily handle async exeptions in express. Just need to wrap all async function in it. example in ./backend/routes/productRoutes. It is instead of using try/catch OR .catch(next)
 
-- Alex! remember - you have PostMan collection on PC. Use it test the API
+- Alex! remember - you have PostMan collection on PC. Use it test the API - double check ! Seems it is lost - find and add to Postman acc.
 
 - error handling is in separate middleware. Read comments - seems express undertand the error only by amount of params passed to middleware. 404 error also there.
 we also use
