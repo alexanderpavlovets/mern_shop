@@ -47,4 +47,6 @@ Read about it more on npm - i bety you will need it in the future. Basically it 
 
 - we dispatch 2 action USER_REGISTER and USER_LOGIN in "userActions -> register" - to set creds into local storage after success register
 
-
+- PayPal - there are 2 accounts - personal/business. Personal = client who pays, business - for the mernShop itself.
+- we use package to have PayPal button - react-paypal-button-v2, just to avoid big UI and etc. 
+- IMPORTANT - to pay via paypal - use developer sandBox credentials. "Developer paypal" google it
