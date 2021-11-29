@@ -24,7 +24,7 @@ Than copy another connection URL from "connect from application" to .env file - 
 
 - express-async-handler package is used to easily handle async exeptions in express. Just need to wrap all async function in it. example in ./backend/routes/productRoutes. It is instead of using try/catch OR .catch(next)
 
-- Alex! remember - you have PostMan collection on PC. Use it test the API - double check ! Seems it is lost - find and add to Postman acc.
+- Alex! remember - you have PostMan collection on PC. Use it test the API.
 
 - error handling is in separate middleware. Read comments - seems express undertand the error only by amount of params passed to middleware. 404 error also there.
 we also use
@@ -33,7 +33,7 @@ we also use
 ``` export const listProducts = () => async (dispatch) => { ```
 Read about it more on npm - i bety you will need it in the future. Basically it allows to return function from actions instead of actions. Kind of middleware that gives you a way to make async stuf in actions
 
-- base flow: constants -> reducers -> actions -> implement actions in component
+- base flow: backend controller -> constants -> reducers -> actions -> dispatch action in component/screen
 
 - add to cart interestng approach - by clck on "addToCart" we redirect, than on CartScreen = we just parse props and if cart is open after "addTocart" - we dispatch action "CART_ADD_ITEM" -> set it to local storage 
 
@@ -47,4 +47,6 @@ Read about it more on npm - i bety you will need it in the future. Basically it 
 
 - we dispatch 2 action USER_REGISTER and USER_LOGIN in "userActions -> register" - to set creds into local storage after success register
 
-
+- PayPal - there are 2 accounts - personal/business. Personal = client who pays, business - for the mernShop itself.
+- we use package to have PayPal button - react-paypal-button-v2, just to avoid big UI and etc. 
+- IMPORTANT - to pay via paypal - use developer sandBox credentials. "Developer paypal" google it
