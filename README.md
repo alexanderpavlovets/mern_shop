@@ -33,7 +33,7 @@ we also use
 ``` export const listProducts = () => async (dispatch) => { ```
 Read about it more on npm - i bety you will need it in the future. Basically it allows to return function from actions instead of actions. Kind of middleware that gives you a way to make async stuf in actions
 
-- base flow: constants -> reducers -> actions -> implement actions in component
+- base flow: backend controller -> constants -> reducers -> actions -> dispatch action in component/screen
 
 - add to cart interestng approach - by clck on "addToCart" we redirect, than on CartScreen = we just parse props and if cart is open after "addTocart" - we dispatch action "CART_ADD_ITEM" -> set it to local storage 
 
