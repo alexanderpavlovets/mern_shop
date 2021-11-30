@@ -16,6 +16,8 @@ Than connect a Compass -> Clusters -> connect -> Compass -> Copy connection stri
 Paste connection string to CompassAPP -> change string's ending from default /test to your db name. Add a password to the string
 Than copy another connection URL from "connect from application" to .env file - replace dbname and password
 
+- IMPORTANT. Mongo is setup for cloud. Durng development - switch to local DB or comment out "connectDB()" string in "server.js" - just to avoid often connections to cloud, because of nodemon rebuild on every line change.
+
 - "colors" package installed. Should be imported once (main file in order of reading) - add colors to string ) really funny one :)
 
 - mongooose is using models to describe data. in backend/models. Mongo automatically creates "_id" field - don't send "id" fields from your data.
@@ -52,3 +54,6 @@ Read about it more on npm - i bety you will need it in the future. Basically it 
 - IMPORTANT - to pay via paypal - use developer sandBox credentials. "Developer paypal" google it
 
 - some requests are only for admin users - see "admin" middleware applied in routes.
+- login as admin to see additional functionality in header (not only). Creds are very simple :)  
+
+- good example of icons from font in UserListScreen, look for className='fas ... iconName'
