@@ -35,7 +35,9 @@ const OrderScreen = ({ match }) => {
       document.body.appendChild(script)
     }
 
-    // Some spaghetti here - i would change somehow. Good point to refactor. 
+    // Some spaghetti here - i would change somehow. Good point to refactor.
+    // TODO: Refactor - indeed spaghetti is broken. Here is a bug: when user has 2 orders - only first is shown, after click on "Details" button
+    // Check if orderIds are equal. Pay attention to other states affected by this fucking spaghetti.
     if(!order || successPay) {
       dispatch({ type: ORDER_PAY_RESET })
       dispatch(getOrderDetails(orderId))

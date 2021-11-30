@@ -50,3 +50,5 @@ Read about it more on npm - i bety you will need it in the future. Basically it 
 - PayPal - there are 2 accounts - personal/business. Personal = client who pays, business - for the mernShop itself.
 - we use package to have PayPal button - react-paypal-button-v2, just to avoid big UI and etc. 
 - IMPORTANT - to pay via paypal - use developer sandBox credentials. "Developer paypal" google it
+
+- some requests are only for admin users - see "admin" middleware applied in routes.
