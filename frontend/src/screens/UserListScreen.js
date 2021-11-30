@@ -25,7 +25,7 @@ const UserListScreen = ({ history }) => {
       history.push('/login')
     }
     
-  }, [dispatch, history, successDelete]) // weird to pass a dispatch as dependency - i see info, that React guarantee that dispatch won't change between renders. TODO: double check.
+  }, [dispatch, history, successDelete, userInfo]) // weird to pass a dispatch as dependency - i see info, that React guarantee that dispatch won't change between renders. TODO: double check.
 
   const deleteHandler = (id) => {
     if (window.confirm('Are you sure')) {
@@ -67,7 +67,7 @@ const UserListScreen = ({ history }) => {
                         }
                       </td>
                       <td>
-                        <LinkContainer to={`/user/${user._id}/edit`}>
+                        <LinkContainer to={`/admin/user/${user._id}/edit`}>
                           <Button variant='light' className='btn-sm'>
                             <i className='fas fa-edit'></i>
                           </Button>
