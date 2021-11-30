@@ -1,6 +1,13 @@
 import express from 'express'
 const router = express.Router()
-import { authUser, registerUser, getUserProfile, updateUserProfile, getUsers } from '../controllers/userController.js'
+import {
+  authUser,
+  registerUser,
+  getUserProfile,
+  updateUserProfile,
+  getUsers,
+  deleteUser,
+} from '../controllers/userController.js'
 import { protect, admin } from '../middleware/authMiddleware.js'
 
 router.route('/')
@@ -10,5 +17,6 @@ router.post('/login', authUser)
 router.route('/profile')
   .get(protect, getUserProfile) // this is an example hot to provide middleware to only 1 endpoint
   .put(protect, updateUserProfile)
+router.route('/:id').delete(protect, admin, deleteUser)
 
 export default router

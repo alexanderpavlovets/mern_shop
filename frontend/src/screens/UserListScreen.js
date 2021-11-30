@@ -4,7 +4,7 @@ import { Table, Button } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
-import { listUsers } from '../actions/userActions'
+import { listUsers, deleteUser } from '../actions/userActions'
 
 const UserListScreen = ({ history }) => {
   const dispatch = useDispatch()
@@ -14,6 +14,9 @@ const UserListScreen = ({ history }) => {
 
   const userLogin = useSelector(state => state.userLogin)
   const { userInfo } = userLogin
+ 
+  const userDelete = useSelector(state => state.userDelete)
+  const { success: successDelete } = userDelete
 
   useEffect(() => {
     if (userInfo && userInfo.isAdmin) {
@@ -22,10 +25,12 @@ const UserListScreen = ({ history }) => {
       history.push('/login')
     }
     
-  }, [dispatch, history]) // weird to pass a dispatch as dependency - i see info, that React guarantee that dispatch won't change between renders. TODO: double check.
+  }, [dispatch, history, successDelete]) // weird to pass a dispatch as dependency - i see info, that React guarantee that dispatch won't change between renders. TODO: double check.
 
   const deleteHandler = (id) => {
-    console.log('delete user with id ', id)
+    if (window.confirm('Are you sure')) {
+      dispatch(deleteUser(id))
+    }
   }
 
   return (
