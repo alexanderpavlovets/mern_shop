@@ -16,7 +16,7 @@ const UserListScreen = ({ history }) => {
   const { userInfo } = userLogin
  
   const userDelete = useSelector(state => state.userDelete)
-  const { success: successDelete } = userDelete
+  const { success: successDelete } = userDelete // INTERESTING way of usage redux - "successDelete" just retriggers useEffect, to update the users list to show
 
   useEffect(() => {
     if (userInfo && userInfo.isAdmin) {
