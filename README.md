@@ -61,3 +61,5 @@ Read about it more on npm - i bety you will need it in the future. Basically it 
 - remember that you have "seeder" script - look at main package.json, it fills initial data into the DB - don't be afraid to delete, modify the data.
 
 - Multer package is used to handle images upload. It handles mutipart/form-data content type.
+
+- Morgan package for logging http requests - good one, see more in docs, can be healpfull one.
