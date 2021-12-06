@@ -80,11 +80,21 @@ const getMyOrders = asyncHandler(async (req, res) => {
   res.json(orders)
 })
 
+// @desc    Get all orders
+// @route   GET /api/orders
+// @access  Private/Admin
+const getOrders = asyncHandler(async (req, res) => {
+  const orders = await Order.find({}).populate('user', 'id name')
+
+  res.json(orders)
+})
+
 export {
   addOrderItems,
   getOrderById,
   updateOrderToPaid,
-  getMyOrders
+  getMyOrders,
+  getOrders
 }
 
 // .populate method - read more. Seems it filters what should be included in user. User is connected by Mongoose shema here
