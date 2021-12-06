@@ -47,8 +47,9 @@ const OrderScreen = ({ match, history }) => {
 
     // Some spaghetti here - i would change somehow. Good point to refactor.
     // TODO: Refactor - indeed spaghetti is broken. Here is a bug: when user has 2 orders - only first is shown, after click on "Details" button
+    // TODO: Refactor - again spaghetti bug, when admin checks 1 order - ok, when trying to open 2nd - 1st one is shown. Added ugly fix with more spaghetti (orderId !== order._id)
     // Check if orderIds are equal. Pay attention to other states affected by this fucking spaghetti.
-    if(!order || successPay || successDeliver) {
+    if(!order || successPay || successDeliver || (orderId !== order._id)) {
       dispatch({ type: ORDER_PAY_RESET })
       dispatch({ type: ORDER_DELIVER_RESET })
       dispatch(getOrderDetails(orderId))
