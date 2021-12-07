@@ -63,3 +63,5 @@ Read about it more on npm - i bety you will need it in the future. Basically it 
 - Multer package is used to handle images upload. It handles mutipart/form-data content type.
 
 - Morgan package for logging http requests - good one, see more in docs, can be healpfull one.
+
+- Header is not Route in App.js, but i it is Possible to use "history" props in SearchBox. See implementation in Header.js component.

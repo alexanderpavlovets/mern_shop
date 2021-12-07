@@ -6,15 +6,17 @@ import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { listProducts } from '../actions/productActions.js'
 
-const HomeScreen = () => {
+const HomeScreen = ({ match }) => {
+  const keyword = match.params.keyword
+
   const dispatch = useDispatch()
 
   const productList = useSelector(state => state.productList)
   const { loading, error, products } = productList
 
   useEffect(() => {
-    dispatch(listProducts())
-  }, [dispatch]) // array for dependencies. Read about it mor.
+    dispatch(listProducts(keyword))
+  }, [dispatch, keyword]) // array for dependencies. Read about it mor.
 
   return (
     <>
