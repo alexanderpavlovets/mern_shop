@@ -5,6 +5,7 @@ import Product from '../components/Product'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
 import Paginate from '../components/Paginate'
+import ProductCarousel from '../components/ProductCarousel'
 import { listProducts } from '../actions/productActions.js'
 
 const HomeScreen = ({ match }) => {
@@ -22,6 +23,7 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
+      { !keyword && <ProductCarousel></ProductCarousel> }
       <h1>Latest products</h1>
       {loading
         ? < Loader />
@@ -45,7 +47,3 @@ const HomeScreen = ({ match }) => {
 export default HomeScreen
 
 //  <Col sm={12} md={6} lg={4} xl={3}> - react -bootstrap GRID in docs
-
-// useState hook is instead of state in calss Componenets
-
-// useEffect hook - as soon as component loads
