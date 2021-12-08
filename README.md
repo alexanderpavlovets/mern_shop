@@ -65,3 +65,6 @@ Read about it more on npm - i bety you will need it in the future. Basically it 
 - Morgan package for logging http requests - good one, see more in docs, can be healpfull one.
 
 - Header is not Route in App.js, but i it is Possible to use "history" props in SearchBox. See implementation in Header.js component.
+
+- Pagination is implemented in the project. To see it, or add more products, or change products amount on page in BE productController "const pageSize = 10"
+This pagination will also work on product list screen for admins 
