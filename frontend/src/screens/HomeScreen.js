@@ -30,7 +30,7 @@ const HomeScreen = ({ match }) => {
         ? <ProductCarousel />
         : <Link to='/' className='btn btn-light'>Go Back</Link>
       }
-      <h1>Привет Малюк )</h1>
+      <h1>Latest products</h1>
       {loading
         ? < Loader />
         : error
