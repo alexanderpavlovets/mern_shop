@@ -86,3 +86,15 @@ For that "any" route it will response with "./frontend/build/index.html" file
   npm start
 ```
 - go to local host 5000 - you will see the app
+
+## Heroku: 
+- create an account 
+- download heroku cli: https://devcenter.heroku.com/articles/heroku-cli
+- for Windows gitBash only!!! ``` heroku --version``` to test 
+- ``` heroku update ``` - yes. It is installed from official webpage with obsolete version :) 
+- ``` heroku login ``` -> login in opened browser
+- ``` heroku logout ``` - guess what it will do :)
+- ``` heroku create appuniqname``` - it will create an app for you, name should be uniq. https://alex-mern-shop.herokuapp.com/
+- add heroku Procfile - i have it in root -> add "web:" command there (what to run)
+- add "heroku-postbuild" npm script in package.json. "--prefix frontend" - as always just refers to frontend folder
+-
