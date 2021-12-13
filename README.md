@@ -100,5 +100,8 @@ For that "any" route it will response with "./frontend/build/index.html" file
 - make sure to add and commit latest changes. 
 - add heroku git remote. Descripbed here: https://dashboard.heroku.com/apps/alex-mern-shop/deploy/heroku-git - basically: 
 - ``` heroku git:remote -a alex-mern-shop ``` - you should see smth like "set git remote heroku to https://git.heroku.com/alex-mern-shop.git"
-- deploy ``` git push heroku master ```
+- deploy ``` git push heroku master ``` (PAY ATTENTION ``` git push heroku develop:master ```) - "develop" is local branch name, if you are not on master.
 - in the terminal you will see progress + progress of added "heroku-postbuild" script
+- ``` heroku logs ```
+- got to heroku account -> your app -> settings -> add env vars in "Config Vars" from .env
+- DEPLOYED!!! 
