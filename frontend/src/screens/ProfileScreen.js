@@ -6,6 +6,7 @@ import Message from '../components/Message'
 import Loader from '../components/Loader'
 import { getUserDetails, updateUserProfile } from '../actions/userActions'
 import { listMyOrders } from '../actions/orderActions'
+import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants'
 
 const ProfileScreen = ({ location, history }) => {
   const [name, setName] = useState('')
@@ -32,7 +33,8 @@ const ProfileScreen = ({ location, history }) => {
     if (!userInfo) { // can't understand whn it is possible to not be logged in, but have this link. Maybe will be clear after.
       history.push('/login')
     } else {
-      if (!user.name) {
+      if (!user || !user.name || success) {
+        dispatch({ type: USER_UPDATE_PROFILE_RESET })
         // Here wi dispatch get user info when screen already opened. So initially we don't have this "user". WTF ? No explanation - spent 30 mins on this SHIT!!!
         dispatch(getUserDetails('profile')) // FUCK ! First really stupid stuff in the course. WTF??? 'profile' is 'id' ??? Really?
         dispatch(listMyOrders())
@@ -41,7 +43,7 @@ const ProfileScreen = ({ location, history }) => {
         setEmail(user.email)
       }
     }
-  }, [dispatch, history, userInfo, user])
+  }, [dispatch, history, userInfo, user, success])
 
   const submitHandler = (e) => {
     e.preventDefault() // to not refresh the page.
