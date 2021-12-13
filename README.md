@@ -99,6 +99,6 @@ For that "any" route it will response with "./frontend/build/index.html" file
 - add "heroku-postbuild" npm script in package.json. "--prefix frontend" - as always just refers to frontend folder
 - make sure to add and commit latest changes. 
 - add heroku git remote. Descripbed here: https://dashboard.heroku.com/apps/alex-mern-shop/deploy/heroku-git - basically: 
-- ``` heroku git:remote -a alex-mern-shop ```
+- ``` heroku git:remote -a alex-mern-shop ``` - you should see smth like "set git remote heroku to https://git.heroku.com/alex-mern-shop.git"
 - deploy ``` git push heroku master ```
-- in the terminal you will see progress
+- in the terminal you will see progress + progress of added "heroku-postbuild" script
